@@ -93,9 +93,3 @@ gulp.task('build', gulp.parallel('html', 'css', 'js', 'vendor-css', 'vendor-js',
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
-
-
-
-
-
-
