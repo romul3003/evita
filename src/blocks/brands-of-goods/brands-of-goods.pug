@@ -1,0 +1,10 @@
+
+mixin item-block (img, title, url)
+  +e(a).item(href= url)
+    +e('img').img(src= img, title= title)
+
+mixin b-brands-of-goods()
+  +b('section').brands-of-goods
+    +e.row
+      each brand in brandsImages
+        +item-block(brand.img, brand.title, brand.url)
