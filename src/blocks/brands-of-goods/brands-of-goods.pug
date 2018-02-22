@@ -2,10 +2,9 @@
 mixin item-block (img, title, url)
   +e(a).item(href= url)
     +e('img').img(src= img, title= title)
-
-+b('section').brands-of-goods
-  +e.row
+mixin brands-of-goods()
+  +b('section').brands-of-goods
     +b-headline('Бренды  c которыми работаем', 'Бренды товаров', 'Мы заботимся о красоте наших клиентов и передаем знания')
-  +e.row
-    each brand in brandsImages
-      +item-block(brand.img, brand.title, brand.url)
+    +e.row
+      each brand in brandsImages
+        +item-block(brand.img, brand.title, brand.url)
