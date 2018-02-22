@@ -1,11 +1,19 @@
-.container-fluid
-	.row.justify-content-end
-		.col-sm-4.text
-			p Studio of beauty
-			h2 Дорогой салон красоты в Москве
-			p Мы заботимся о красоте наших клиентов и передаем знания многим желающим. Наша цель - нести в мир красоту и радость.
-		.col-sm-7.bggrey
-			.mainpic
-				img.mainpic(src=asset('images/mainPic.jpg'))
+mixin mainfirstblock()
+	+b.mainfirstblock
+		.container-fluid
+			.row.justify-content-end
+				+e.text.col-sm-4
+					+e('p').title-about — Studio of beauty
+					+e('h2').main-title Дорогой салон красоты в Москве
+					+e('p').subtitle Мы заботимся о красоте наших клиентов и передаем знания многим желающим. Наша цель - нести в мир красоту и радость.
+					div
+						+e('button').selected Записаться в салон
+						+e('button').def Перейти к услугам
+					div
+						+e.next Листайте вниз
 
-			
+				+e.col-sm-7.underpic
+					+e.mainpic
+						+e('img').mainpic-img(src=asset('images/mainPic.jpg'))
+
+					
