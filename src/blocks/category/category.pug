@@ -1,0 +1,8 @@
+mixin b-category(imgUrl, title, subtitle)
+	+b.category
+		+e("figure").imgege-wrap
+			+e(img).img(src=asset(imgUrl))
+			
+		+e.content
+				+e.title= title
+				+e.subtitle= subtitle
