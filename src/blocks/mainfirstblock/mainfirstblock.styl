@@ -1,19 +1,24 @@
 .mainfirstblock
 	&__text
 		margin-top: 35px
+		width: 30% 
+		float: left
+		margin-left: 100px
 			
-	&__col-sm-7.underpic
+	&__underpic
 		background-color: #f4f4f4
-		height: 436px
-		margin:0px
-		padding:0px
+		width: 55%
+		float: right
+		height: 600px
 		
 	&__mainpic
+		display: inline-block
+		background-image: url("images/mainPic.jpg")
 		margin-top: 20px
 		margin-right: 0px
-		width: 96%
-		height: auto
 		float: right
+		width: 95%
+		height: 650px
 		
 	&__selected
 		background-color #b19870
@@ -32,17 +37,28 @@
 		padding 20px
 		border 1px solid #b19870
 		margin-left 20px
+	
+	&__nextbtn
+		margin 120px 0 0 0
 
 	&__next
+		position absolute
+		font-family 'FuturaPT-book'
 		display inline-block
+		margin-left 13px
+		margin-top 95px
 		text-transform uppercase
 		transform rotate(-90deg)
 		transform-origin 0% 100%
 		font-size 12px
 		color #d5d5d5
-		margin 0px
-		padding 0px
 		line-height 0px
+		
+	&__line
+		position absolute
+		height 104px
+		width 1px
+		background-image: url("images/line.png")
 		
 	&__title-about
 		font-family 'Playfair Display', "Times New Roman", Georgia, serif
@@ -52,3 +68,14 @@
 		font-size 15px
 		font-style: italic
 
+	&__main-title
+		font-family 'Playfair Display', "Times New Roman", Georgia, serif
+		font-weight normal
+		font-size 54px
+		line-height 64px
+
+	&__subtitle
+		font-family 'FuturaPT-book'
+		line-height 25px
+		margin-top 12px
+		margin-bottom 32px
