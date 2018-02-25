@@ -13,8 +13,17 @@ block scripts
 
 block main
 	block content
-	h1 hello EVITA!
-	+b-all-blocks-presentation()
+	//- h1 hello EVITA!
+	//- +b-all-blocks-presentation()
+
+	section.title-section
+		+b-headline("Специальные предложения", "Специальные предложения", "Мы заботимся о красоте наших клиентов и передаем знания многим желающим")
+	
+	section.title-section
+		+b-headline("Категории услуг", "Категории услуг", "Мы заботимся о красоте наших клиентов и передаем знания многим желающим")
+	
+
+	+b-categories()
 	//- +b-footer()
 
 

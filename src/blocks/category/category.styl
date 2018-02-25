@@ -5,4 +5,38 @@
 		position absolute
 		right 0
 		bottom 0
+		padding .5em 1.5em
+		background-color #fff
 		
+	&__title
+		font-size 22px
+		font-family 'FuturaPT-Heavy', Helvetica, Arial, sans-serif
+		
+	&__subtitle
+		color #b19870
+		font-size 9px
+		font-family 'FuturaPT-Bold', Helvetica, Arial, sans-serif
+		text-transform uppercase
+		letter-spacing 1.1px
+		
+	&__link
+		position relative
+		display block
+		
+		&:hover
+			color #000
+			
+			&:after
+				background-color #000
+		
+		&:after
+			content ""
+			position absolute
+			top 50%
+			transform translate(0, -50%)
+			width 20px
+			height 1px
+			margin-left 1em
+			background-color #b19870
+			transition background-color .2s
+			

@@ -1,3 +1,20 @@
-mixin categories()
+mixin b-categories()
 	.container
-		
+		+b("ul").categories
+			+e("li").item
+				+b-category("images/category-img-1.jpg", "Волосы & Цвет", "Перейти к услугам")
+
+			+e("li").item
+				+b-category("images/category-img-2.jpg", "Макияж & Брови", "Перейти к услугам")
+
+			+e("li").item
+				+b-category("images/category-img-3.jpg", "СПА & Массаж", "Перейти к услугам")
+
+			+e("li").item
+				+b-category("images/category-img-4.jpg", "Маникюр & Педикюр", "Перейти к услугам")
+
+			+e("li").item
+				+b-category("images/category-img-5.jpg", "Эпиляция", "Перейти к услугам")
+
+			+e("li").item
+				+b-category("images/category-img-6.jpg", "Косметология & Уход", "Перейти к услугам")
