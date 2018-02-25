@@ -1,7 +1,7 @@
-mixin b-headline(label, title, subtitle)
-	+b.headline
-		+e.label-title= label
-		+e("h2").title= title
-		+e.subtitle= subtitle
-
+mixin b-headline(label, title, subtitle, align, titleColor, subtitleColor)
 	
+	+b.headline(class= align)
+		+e.label-title= label
+		+e("h2").title(class= titleColor)= title
+		+e.subtitle(class= subtitleColor)= subtitle
+

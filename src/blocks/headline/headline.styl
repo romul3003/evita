@@ -1,11 +1,11 @@
 .headline
+	text-align center
+	line-height normal
 	
 	&__label-title
 	&__title
 		font-family 'Playfair Display', "Times New Roman", Georgia, serif
 		font-weight 400
-		line-height normal
-		text-align center
 	
 	&__label-title
 		position relative
@@ -23,5 +23,20 @@
 	&__subtitle
 		font-family 'FuturaPT-Book', Helvetica, Arial, sans-serif
 		color #767676
-		line-height normal
+		
+	// modifiers
+	&_l-align
+		text-align left
+		
+	&_r-align
+		text-align right
+		
+	&_c-align
 		text-align center
+		
+	&__title_white
+	&__subtitle_white
+		color #fff
+		
+	&__subtitle_grey
+		color: #767676
