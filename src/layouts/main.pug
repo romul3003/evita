@@ -6,11 +6,12 @@ block styles
 
 block scripts
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" defer)
 	script(src=asset("main.js"))
 
 block main
+	+b-header()
 	block content
-	h1 hello EVITA!
 
 	//- +b-footer()
 
