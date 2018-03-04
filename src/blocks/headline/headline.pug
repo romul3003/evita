@@ -1,7 +1,8 @@
-mixin b-headline(label, title, subtitle, align, titleColor, subtitleColor)
-	
-	+b.headline(class= align)
-		+e.label-title= label
-		+e("h2").title(class= titleColor)= title
-		+e.subtitle(class= subtitleColor)= subtitle
+//- mixin b-headline(label, title, subtitle, align, titleColor, subtitleColor)
+
+mixin b-headline(paramsObj)
+	+b.headline
+		+e.label-title= paramsObj.label
+		+e("h2").title= paramsObj.title
+		+e.subtitle= paramsObj.subtitle
 
