@@ -1,27 +1,69 @@
 .headline
+	text-align center
+	line-height normal
+	
+	&_secondary-bg-color
+		background-color #222
 	
 	&__label-title
 	&__title
 		font-family 'Playfair Display', "Times New Roman", Georgia, serif
 		font-weight 400
-		line-height normal
-		text-align center
 	
 	&__label-title
 		position relative
-		color: #b19870
-		font-size 22px
+		color: mainColor
+		font-size 20px
 		font-style: italic
 		&::before
 			content: "—"
 			margin-right .5em
 			
+		&_align-left
+			text-align left
+			
+		&_align-right
+			text-align right
+			
+		&_align-center
+			text-align center
+			
+		&_color-white
+			color #fff
+			
 	&__title
 		margin-bottom .15em
-		font-size 65px
+		font-size 52px
+		
+		&_align-left
+			text-align left
+			
+		&_align-right
+			text-align right
+		
+		&_align-center
+			text-align center
+			
+		&_color-white
+			color #fff
+
 		
 	&__subtitle
 		font-family 'FuturaPT-Book', Helvetica, Arial, sans-serif
 		color #767676
-		line-height normal
-		text-align center
+		font-size 18px
+		
+		&_align-left
+			text-align left
+			
+		&_align-right
+			text-align right
+			
+		&_align-center
+			text-align center
+			
+		&_color-white
+			color #fff
+		
+		&_color-grey
+			color: #767676
