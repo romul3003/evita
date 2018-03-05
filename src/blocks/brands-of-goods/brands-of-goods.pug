@@ -1,7 +1,11 @@
 
-+b-brands-of-goods()
+mixin b-brands-of-goods(brandsImages)
   +b('section').brands-of-goods
-    +b-headline('Бренды  c которыми работаем', 'Бренды товаров', 'Мы заботимся о красоте наших клиентов и передаем знания')
+    +b-headline({
+        label: 'Бренды  c которыми работаем',
+        title: 'Бренды товаров',
+        subtitle: 'Мы заботимся о красоте наших клиентов и передаем знания'
+    })
     +e.row
       each brand in brandsImages
         +e(a).item(href= brand.url)
