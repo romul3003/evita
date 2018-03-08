@@ -1,0 +1,4 @@
+mixin b-nav()
+	+b('nav').nav
+		each link in navLinks
+			+e('a').link(href= link.url)= link.title

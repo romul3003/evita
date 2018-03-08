@@ -1,0 +1,16 @@
+mixin b-mainfirstblock()
+	+b.mainfirstblock
+		.container.clearfix
+			+e.text
+				+e('p').title-about — Studio of beauty
+				+e('h2').main-title Дорогой салон красоты в Москве
+				+e('p').subtitle Мы заботимся о красоте наших клиентов и передаем знания многим желающим. Наша цель - нести в мир красоту и радость.
+				+e.subscribe
+					+e('button').selected Записаться в салон
+					+e('button').def Перейти к услугам
+				+e.nextbtn
+					+e.line
+					+e.next Листайте вниз
+
+			+e.underpic
+				+e.mainpic

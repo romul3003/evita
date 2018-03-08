@@ -1,0 +1,99 @@
+.header
+	&__nav
+		position relative
+		border-bottom 1px solid mercury
+		font-size 10px
+		font-weight 700
+		font-family futura
+		letter-spacing 1.1px
+		text-transform uppercase
+	&__search
+		position absolute
+		top 0
+		left 0
+		height 100%
+		border-right 1px solid mercury
+		&-label
+			background transparent url(images/search-icon.png) center/contain no-repeat
+			width 11px
+			height 11px
+			display block
+			margin 27px 33px
+			cursor pointer
+		&-input
+			display none
+	&__menu
+		margin 0 auto
+	&__action
+		position absolute
+		top 0
+		right 0
+		@extend .button_full
+		padding 27px
+		height 64px
+	&__body
+		display flex
+		justify-content space-between
+		align-items center
+		@extend .container
+		position relative
+		padding-top 37px
+	&__burger
+		position relative
+		font-size 10px
+		font-weight 700
+		font-family futura
+		letter-spacing 1.1px
+		text-transform uppercase
+		border 0
+		background-color transparent
+	&__logo
+		position absolute
+		top 30px
+		left calc(50% - 58px)
+		img
+			max-width 115px
+	&__contacts
+		font-size 16px
+		font-weight 400
+		font-family futura
+		position relative
+		padding-right 17px
+		a 
+			color black
+		&:after
+			content ''
+			position absolute
+			top calc(50% - 2px)
+			right 0
+			display inline-block
+			width 6px
+			height 4px
+			background transparent url(images/bottom-arrow.png) center/contain no-repeat
+	&__main-menu
+		display none
+		position fixed
+		z-index 1
+		top 0
+		left 0
+		width 100%
+		height 100vh
+		background-color mine-shaft
+		overflow-y scroll
+	&-open
+		.header__main-menu
+				display block
+				
+	
+		
+			
+
+
+
+
+
+
+
+
+
+

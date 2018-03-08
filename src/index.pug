@@ -1,4 +1,3 @@
-//- extends layouts/presentation
 extends layouts/main
 
 
@@ -6,4 +5,20 @@ append params
 	- pageTitle = "Evita"
 
 block content
-	// h1 Hello, World!
+	+b-mainfirstblock()
+
+	section.title-section
+		+b-headline({
+			label: "Специальные предложения",
+			title: "Специальные предложения",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
+		})
+	
+	section.title-section
+		+b-headline({
+			label: "Категории услуг",
+			title: "Категории услуг",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
+		})
+	+b-categories(categoryItems)
+	+b-brands-of-goods(brandsImages)
