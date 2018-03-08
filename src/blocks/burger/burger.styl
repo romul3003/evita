@@ -1,0 +1,77 @@
+.burger
+	overflow hidden
+	cursor pointer
+	&__icon
+		z-index 2
+		position absolute
+		width 15px
+		height 10px
+		left 0
+		top calc(50% - 5px)
+		overflow hidden
+		&-top,
+		&-center,
+		&-bottom
+			position absolute
+			left 0
+			height 2px
+			background-color sandal
+			transform translateX(17px);
+			&:before
+				content ''
+				position absolute
+				top 0
+				left -17px
+				height 2px
+				background-color sandal
+		&-center
+			width 15px
+			top calc(50% - 1px)
+			transition transform .3s ease-in
+			&:before
+				width 15px
+		&-top,
+		&-bottom
+			width 12px
+			transition transform .3s ease-in .1s
+			&:before
+				width 12px
+		&-top
+			top 0
+		&-bottom
+			bottom 0
+	&__text
+		height 15px
+		padding-left 25px
+		span
+			display block
+			transition transform .3s ease-in
+	&:hover
+		.burger__icon-top,
+		.burger__icon-center,
+		.burger__icon-bottom
+			transform translateX(0);
+		.burger__text span
+			transform translateY(-100%);
+.header-open
+	.burger
+		&__icon
+			overflow visible
+			&-center
+				opacity 0
+			&-top,
+			&-bottom
+				top 4px
+				bottom auto
+				&:before
+					content none
+			&-top
+				transform rotate(-45deg)
+			&-bottom
+				transform rotate(45deg)
+		&:hover
+			.burger__icon
+				&-top
+					transform rotate(-45deg)
+				&-bottom
+					transform rotate(45deg)
