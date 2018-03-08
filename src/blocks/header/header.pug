@@ -1,0 +1,22 @@
+include ../nav/nav
+include ../burger/burger
+include ../main-menu/main-menu
+
+mixin b-header
+	+b('header').header
+		+e.nav
+			+e.search
+				+e('label').search-label
+				+e('input').search-input
+			+e.menu
+				+b-nav()
+			+e('a')(href="/").action Записаться в салон
+		+e.body
+			+e.burger
+				+b-burger()
+			+e('a').logo
+				+e('img').logo-image(src=asset("images/logo.png"))
+			+e('ul').contacts
+				+e('li').mobile: +e('a')(href="tel:+7 (495) 787-00-57") +7 (495) 787-00-57
+		+e('nav').main-menu
+			+b-main-menu()
