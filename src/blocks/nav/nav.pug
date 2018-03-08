@@ -1,4 +1,4 @@
-mixin b-nav()
+mixin b-nav(links)
 	+b('nav').nav
-		each link in navLinks
+		each link in links
 			+e('a').link(href= link.url)= link.title

@@ -2,14 +2,14 @@ include ../nav/nav
 include ../burger/burger
 include ../main-menu/main-menu
 
-mixin b-header
+mixin b-header(data)
 	+b('header').header
 		+e.nav
 			+e.search
 				+e('label').search-label
 				+e('input').search-input
 			+e.menu
-				+b-nav()
+				+b-nav(data.navLinks)
 			+e('a')(href="/").action Записаться в салон
 		+e.body
 			+e.burger
@@ -19,4 +19,4 @@ mixin b-header
 			+e('ul').contacts
 				+e('li').mobile: +e('a')(href="tel:+7 (495) 787-00-57") +7 (495) 787-00-57
 		+e('nav').main-menu
-			+b-main-menu()
+			+b-main-menu(data.mainMenu, data.services)
