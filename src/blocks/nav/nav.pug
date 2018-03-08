@@ -1,4 +1,7 @@
-mixin b-nav(links)
+mixin b-nav(links, activeIndex)
 	+b('nav').nav
-		each link in links
-			+e('a').link(href= link.url)= link.title
+		each link, index in links
+			- var classes = ''
+			if index == activeIndex
+				- classes = 'active'
+			+e('a').link(href=link.url class=classes)= link.title

@@ -9,7 +9,7 @@ mixin b-header(data)
 				+e('label').search-label
 				+e('input').search-input
 			+e.menu
-				+b-nav(data.navLinks)
+				+b-nav(data.navLinks, data.activeMenuIndex)
 			+e('a')(href="/").action Записаться в салон
 		+e.body
 			+e.burger
