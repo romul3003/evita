@@ -1,12 +1,9 @@
+- var n = 1;
 mixin followinsta()
 	+b.followinsta
 		+e.wrapper
 			+e.title Следите за нами в Instagram
 			+e.little-title #Bouguessa
 			+e.container
-				+e.item1
-				+e.item2
-				+e.item3
-				+e.item4
-				+e.item5
-				+e.item6
+				while n < 7
+					+e(class='item'+n++)
