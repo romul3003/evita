@@ -1,0 +1,38 @@
+.btn-transparent
+	position relative
+	width 230px
+	padding 2em 1.5em
+	border-radius 0
+	border 1px solid mainColor
+	background-color transparent
+	color #000
+	font-family 'FuturaPT-Bold', Helvetica, Arial, sans-serif
+	font-size 11px
+	letter-spacing 1.1px
+	text-transform uppercase
+	transition background-color .2s ease-in-out, 
+	border-color .2s ease-in-out,
+	color .2s ease-in-out
+	
+	&:focus 
+		box-shadow none
+		
+	&::before
+		content ''
+		position absolute
+		width 25px
+		height 1px
+		left 0
+		top 50%
+		transform translate(-50%, -50%)
+		background-color mainColor
+		transition left .2s linear
+		
+	&:hover
+		border-color mainColorHover
+		color mainColorHover
+		
+		&::before
+			left 100% 
+			transform translate(-50%, 0)
+			

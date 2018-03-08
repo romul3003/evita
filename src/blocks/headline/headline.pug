@@ -1,7 +1,6 @@
-mixin b-headline(label, title, subtitle)
-	+b.headline
-		+e.label-title= label
-		+e("h2").title= title
-		+e.subtitle= subtitle
+mixin b-headline(paramsObj)
+	+b.headline(class=paramsObj.headlineClasses)
+		+e.label-title(class=paramsObj.labelClasses)= paramsObj.label
+		+e("h2").title(class=paramsObj.titleClasses)= paramsObj.title
+		+e.subtitle(class=paramsObj.subtitleClasses)= paramsObj.subtitle
 
-	

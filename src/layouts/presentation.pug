@@ -1,0 +1,44 @@
+extends main
+
+append params
+	- pageTitle = "Презентация блоков"
+
+block main
+	block content
+	section.title-section
+		+b-headline({
+			label: "Специальные предложения",
+			title: "Специальные предложения",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
+		})
+	
+	section.title-section
+		+b-headline({
+			label: "Категории услуг",
+			title: "Категории услуг",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим",
+			labelClasses: "_align-left",
+			titleClasses: "_align-left",
+			subtitleClasses: "_align-left",
+		})
+
+	section.title-section
+		+b-headline({
+			headlineClasses: "_secondary-bg-color",
+			label: "Категории услуг",
+			title: "Категории услуг",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим",
+			labelClasses: "_color-white",
+			titleClasses: "_color-white",
+			subtitleClasses: "_color-white"
+		})
+	
+
+	+b-categories(categoryItems)
+
+	.demonstration-block
+		+b-button-main("Записаться в салон")
+
+	.demonstration-block
+		+b-button-transparent("Перейти к услугам")
+
