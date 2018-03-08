@@ -28,7 +28,8 @@ gulp.task('html', function(){
 
 
 gulp.task('js', function(){
-	return gulp.src('src/assets/*.js')
+	return gulp.src(['src/assets/*.js', 'src/blocks/**/*.js'])
+		.pipe(concat('main.js'))
 		.pipe(gulp.dest('build/assets'))
 });
 

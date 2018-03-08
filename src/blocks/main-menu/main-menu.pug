@@ -1,7 +1,7 @@
-mixin b-main-menu()
+mixin b-main-menu(menu, services)
 	+b('nav').menu
 		+e.links
-			each link in menuLinks
+			each link in menu
 				+e('a').link(href= link.url)= link.title
 		+e.services
 			each link in services
