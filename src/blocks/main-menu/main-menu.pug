@@ -1,0 +1,18 @@
+mixin b-main-menu(menu, services)
+	+b('nav').menu
+		+e.links
+			each link in menu
+				+e('a').link(href= link.url)= link.title
+		+e.services
+			each link in services
+				+e('a').service(href= link.url)= link.title
+		+e.contacts
+			+e('h6').contacts-title Мы в соц.сетях
+			+e('ul').socials
+				+e('li').socials-icon: +e('i').icon.fab.fa-facebook-f
+				+e('li').socials-icon: +e('i').icon.fab.fa-vk
+				+e('li').socials-icon: +e('i').icon.fab.fa-instagram
+			+e('h6').contacts-title Узнайте о выгодных предложениях
+			+e('form').subscribe
+				+e('input')(type="email" id="main-menu__subscribe" placeholder="Введите ваш почтовый адрес")
+				+e('button')(type="submit").subscribe-submit.button_empty ПОДПИСАТЬСЯ
