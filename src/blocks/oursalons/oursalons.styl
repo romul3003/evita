@@ -1,4 +1,9 @@
 .oursalons
+	&__slider
+		position relative
+		width 800px
+		margin 0 auto
+		
 	&__menu
 		margin 0 auto
 		font-size 10px
@@ -12,7 +17,10 @@
 		justify-content center
 		padding 22px 0 25px 0
 
-	&__item
+	&__item1
+	&__item2
+	&__item3
+		
 		font-family 'FuturaPT-Demi'
 		text-align center
 		text-transform uppercase
@@ -28,13 +36,15 @@
 		letter-spacing 1px
 		margin-right 20px
 		margin-left 20px
-		color #000000
+		color black
 		
 	&__topinfo
-		position relative
+		position absolute
 		z-index 1
-		width 800px
-		height 428px
+		width 220px
+		height 321px
+		right 0px
+		bottom 0px
 		
 	&__main
 		position absolute
@@ -70,12 +80,14 @@
 		bottom 0
 		width 150px
 		height 60px
+		z-index 2
 
 	&__bullets
 		background-color #f4f4f4 
 		width 500px
 		height 70px
 		margin 0px auto
+		padding 26px 0 0 40px
 
 	&__pic
 		top 75px
@@ -84,3 +96,52 @@
 		width 800px
 		height 428px
 		margin 0 auto
+
+	&__myslick
+		position absolute
+		width 800px
+		margin 0 auto
+		
+	&__line
+		display flex
+		flex-direction: row
+		width 200px
+		height 30px
+	
+	&__leftnum
+	&__rightnum
+		font-family 'FuturaPT-Demi'
+		font-size 12px
+		color #767676
+
+	&__lines
+		width 25px
+		height 1px
+		background-color #b19870
+		z-index 5
+		margin-top 9px
+		margin-left 10px
+
+	&__lineb
+		width 75px
+		height 1px
+		background-color #cccccc
+		z-index 4
+		margin-top 9px
+		margin-right 10px
+		
+
+
+.slick-next.slick-arrow
+	position absolute
+	background-color #000
+	bottom 25px
+	left 5px
+	z-index 3
+
+.slick-prev.slick-arrow
+	position absolute
+	background-color #000
+	bottom 25px
+	left 70px
+	z-index 3
