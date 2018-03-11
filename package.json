@@ -22,5 +22,6 @@
   "dependencies": {
     "bemto.pug": "^2.1.0",
     "slick-carousel": "^1.8.1"
-  }
+  },
+  "optionalDependencies": {}
 }

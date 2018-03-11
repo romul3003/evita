@@ -1,6 +1,7 @@
-mixin b-categories(items)
+mixin b-blog(items)
 	.container
-		+b("ul").categories
-			each item in items
-				+e("li").item
-					+b-category(item.url, item.title, item.subtitle)
+		+b.blockl
+			+e.block1
+
+		+b.blockr
+			+e.block2

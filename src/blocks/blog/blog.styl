@@ -1,12 +1,25 @@
-.blog
+.container
 	display flex
-	flex-wrap wrap
+	justify-content space-between
 
-	&__item
-		width 30%
-		margin-right 5%
-		margin-bottom 5%
+.blockl
+	display flex
+	justify-content center
+	flex-direction column
+	
+	&__block1
+		background-image url('images/blog1.png')
+		background-size cover
+		width 460px
+		height 250px
 		
-		&:nth-of-type(2)
-			margin-right 0
-			
+.blockr
+	display flex
+	justify-content center
+	flex-direction column
+	
+	&__block2
+		background-image url('images/blog2.png')
+		background-size cover
+		width 460px
+		height 250px
