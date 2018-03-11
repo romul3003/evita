@@ -51,7 +51,7 @@
 		background-color white
 		right 0
 		bottom 0
-		width 220px
+		width 270px
 		height 300px
 		padding-top 25px
 		padding-left 30px
@@ -62,7 +62,7 @@
 	&__titlel
 		font-family 'FuturaPT-Book'
 		font-size 17px
-		margin-top 20px
+		margin-top 5px
 
 	&__def
 		color black
@@ -81,6 +81,14 @@
 		width 150px
 		height 60px
 		z-index 2
+		
+	&__hline
+		position absolute
+		left 68px
+		top 18px
+		width 1px
+		height 24px
+		background-color #e3e3e3
 
 	&__bullets
 		background-color #f4f4f4 
@@ -115,33 +123,67 @@
 		color #767676
 
 	&__lines
-		width 25px
+		position absolute
+		width 31px
 		height 1px
 		background-color #b19870
 		z-index 5
 		margin-top 9px
-		margin-left 10px
+		margin-left 0px
 
 	&__lineb
-		width 75px
+		position absolute
+		width 87px
 		height 1px
 		background-color #cccccc
 		z-index 4
 		margin-top 9px
-		margin-right 10px
+
+	&__wra
+		width 100px
+		padding-left 5px
 		
-
-
 .slick-next.slick-arrow
+	cursor pointer
 	position absolute
-	background-color #000
+	background-image url('images/right-a.png')
+	opacity 0.6
+	border none
+	width 23px
+	height 9px
 	bottom 25px
-	left 5px
+	left 90px
 	z-index 3
-
+	&:hover
+		opacity 1
+	
 .slick-prev.slick-arrow
+	cursor pointer
 	position absolute
-	background-color #000
+	background-image url('images/left-a.png')
+	opacity 0.6
+	border none
+	width 23px
+	height 9px
 	bottom 25px
-	left 70px
+	left 25px
 	z-index 3
+	&:hover
+		opacity 1
+
+
+.slick-active
+	color black
+
+
+.custom-dots
+	font-family 'FuturaPT-Demi'
+	position absolute
+	text-transform uppercase
+	justify-content space-around
+	top -32px
+	left 164px
+	display flex
+	font-size 11px
+	color #a4a4a4
+	width 59%
