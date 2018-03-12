@@ -1,0 +1,13 @@
+mixin b-service(Services)
+  +b('section').service
+    +e.row
+      each service,index in Services
+        +e(a).block.accordion-btn(class='btn'+index)
+          +e.title=service.title
+          +e.lists.accordion-panel(class='accordion-panel'+index)
+            each prop in service.serviceProps
+              +b('ul').inline-list
+                +e('li').item-name=prop.name
+                +e('li').item-time=prop.time
+                +e('li').item-price=prop.price
+

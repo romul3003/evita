@@ -1,0 +1,37 @@
+.service
+  font-family futura
+  &__row
+    width 1070px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+    padding 90px 15px
+    justify-content center
+  &__block
+    display flex
+    width 100%
+    padding-top 60px
+    padding-bottom 60px
+    border-bottom 1px solid mercury
+    //for accordion animation
+    overflow hidden
+    &:hover
+      border-bottom 1px solid dove-gray
+
+  &__title
+    width 25%
+    font-size 26px
+  &__lists
+    width 75%
+    .inline-list
+      display flex
+
+      &:hover
+        color sandal
+      &__item
+        &-name
+          width 50%
+        &-time
+          width 25%
+        &-price
+          width 25%

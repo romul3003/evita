@@ -1,0 +1,16 @@
+extends layouts/main
+
+
+append params
+	- pageTitle = "Service | Evita "
+
+block content
+	section.title-section
+		+b-headline({
+			label: 'Услуги',
+			title: 'Парикхмахерское искусство',
+			subtitle: 'Для записи выберите услугу'
+		})
+	+b-service(hairServices)
+
+	+b-categories(categoryItems)
