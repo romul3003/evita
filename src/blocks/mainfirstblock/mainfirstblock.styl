@@ -1,22 +1,34 @@
 .mainfirstblock
+	.wrapper
+		margin-top 50px
+		position relative
+		min-height 600px
+		
 	&__text
-		margin-top: 35px
-		width: 30% 
-		float: left
-		margin-left: 100px
+		max-width 40%
+		
 			
-	&__underpic
-		background-color: #f4f4f4
-		width: 55%
-		float: right
-		height: 600px
+	&__image
+		position absolute
+		top 50px
+		left calc(50% - 82px)
+		z-index -1
+		&:before 
+			width 100%
+			height 100%
+			content ''
+			position absolute
+			top -70px
+			background-color #f4f4f4
+			z-index -2
+			left -115px
+
 		
 	&__mainpic
 		display: inline-block
 		background-image: url("images/mainPic.jpg")
 		margin-top: 20px
 		margin-right: 0px
-		float: right
 		width: 95%
 		height: 650px
 		
@@ -75,6 +87,7 @@
 		line-height 64px
 
 	&__subtitle
+		max-width 75%
 		font-family 'FuturaPT-book'
 		line-height 25px
 		margin-top 12px
