@@ -1,15 +1,46 @@
 .advantage
-	background-color mine
-	padding 50px 65px 60px
-	font-family futura
+	position relative
+	line-height 1.28
+	display flex
+	flex-wrap wrap
+	padding 20px
+	@media sm
+		padding 20px 30px
+	@media md
+		padding-left 100px
+	@media lg
+		padding 30px 40px
+	@media xxl
+		padding 50px 60px 60px
 	&__img-wrap
-		margin-bottom 35px
+		margin-right 20px
+		margin-bottom 10px
+		@media md
+			position absolute
+			left 20px
+			top 20px
+		@media lg
+			position static
+			margin-right 0
+			margin-bottom 35px
 	&__title
-		margin-bottom 30px
+		margin-bottom 10px
 		font-weight 700
-		font-size 21px
+		font-size 16px
+		font-family futura-heavy
 		color white
+		align-self center
+		flex 1
+		@media md
+			font-size 21px
+		@media lg
+			flex-basis 100%
+			margin-bottom 30px
+			font-size 21px
 	&__text
 		font-weight 400
-		font-size 21px
+		font-size 16px
+		font-family futura
 		color dusty-gray
+		@media md
+			font-size 21px

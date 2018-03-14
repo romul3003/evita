@@ -1,14 +1,36 @@
 .advantages
-	padding-top 145px
-	margin-bottom 200px
+	padding 45px 20px 0
+	margin-bottom 60px
 	background-color mine-shaft
+	@media md
+		padding-top 65px
+		margin-bottom 100px
+	@media xl
+		padding-top 105px
+		margin-bottom 140px
+	@media xxl
+		padding-top 145px
+		margin-bottom 200px
 	&-list
 		display flex
-		margin 0 -40px
+		flex-wrap wrap
+		justify-content space-between
+		align-items stretch
+		@media lg
+			flex-wrap nowrap
 		&__item
-			flex 1 1 25%
-			padding 0 40px
-			max-width 25%
+			margin-bottom 20px
+			max-width calc(50% - 10px)
 			position relative
-			top 65px
+			top 35px
+			background-color mine
+			@media lg
+				top 45px
+				max-width calc(25% - 20px)
+			@media xl
+				top 65px
+				max-width calc(25% - 40px)
+			@media xxl
+				top 75px
+				max-width calc(25% - 80px)
 			
