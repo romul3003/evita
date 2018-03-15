@@ -1,0 +1,19 @@
+extends layouts/main
+
+
+append params
+	- pageTitle = "Categories"
+	- activeMenuIndex = 1
+
+block content
+	section.title-section
+		+b-headline({
+			label: "Категории услуг",
+			title: "Категории услуг",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
+		})
+	+b-categories(categoryItems)
+	+b-advantages(advantages)
+	+b-brands-of-goods(brandsImages)
+
+	+b-followinsta()
