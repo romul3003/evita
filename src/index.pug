@@ -3,6 +3,7 @@ extends layouts/main
 
 append params
 	- pageTitle = "Evita"
+	- activeMenuIndex = 0
 
 block content
 	+b-mainfirstblock()
@@ -22,6 +23,7 @@ block content
 		})
 	+b-categories(categoryItems)
 	+b-brands-of-goods(brandsImages)
+
 	.feedback-form-wrap
 		+b-headline({
 			label: "Форма обратной связи",
@@ -31,3 +33,5 @@ block content
 		})
 
 		+b-feedback-form()
+    
+	+b-followinsta()
