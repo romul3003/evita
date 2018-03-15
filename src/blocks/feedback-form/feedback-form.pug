@@ -1,0 +1,28 @@
+mixin b-feedback-form()
+	+b("form").feedback-form(name="feedbackForm")
+		+e.col_left
+			+e.form-group
+				+e("select").form-control_select(required data-placeholder="Выберете салон*")
+					//- first option for placeholder select2
+					option.select-option
+					option.select-option Салон 1
+					option.select-option Салон 2
+					option.select-option Салон 3
+					option.select-option Салон 4
+
+			+e.form-group
+				+e("input").form-control_input(placeholder="Введите Ваше имя" required
+)
+
+			+e.form-group
+				+e("input").form-control_input(type="tel" placeholder="Введите телефон")
+
+			+e.form-group
+				+e("input").form-control_input(type="tel" placeholder="Введите email*" required
+)
+
+		+e.col_right
+			+e.form-group
+				+e("textarea").form-control_textarea(rows="7" placeholder="Оставьте Ваше сообщение")
+
+		+b("button").btn-main Задать вопрос
