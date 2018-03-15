@@ -21,6 +21,7 @@
     "gulp-stylus": "^2.6.0"
   },
   "dependencies": {
-    "bemto.pug": "^2.1.0"
+    "bemto.pug": "^2.1.0",
+    "slick-carousel": "^1.8.1"
   }
 }
