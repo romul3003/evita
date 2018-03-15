@@ -1,0 +1,13 @@
+mixin b-advantages(advantages)
+	+b('section').advantages
+		+b-headline({
+			label: 'Преимущества',
+			title: 'Преимущества',
+			subtitle: 'Мы заботимся о красоте наших клиентов',
+			titleClasses: "_color-white",
+		})
+		.container
+			+b("ul").advantages-list
+				each advantage in advantages
+					+e("li").item
+						+b-advantage(advantage.src, advantage.title, advantage.text)
