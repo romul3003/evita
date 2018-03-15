@@ -1,5 +1,11 @@
 mixin b-service(Services)
   +b('section').service
+    section.title-section
+      +b-headline({
+          label: 'Услуги',
+          title: 'Парикхмахерское искусство',
+          subtitle: 'Для записи выберите услугу'
+      })
     +e.row
       each service in Services
         +e(a).block.accordion-btn
