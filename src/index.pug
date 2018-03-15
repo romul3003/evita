@@ -22,4 +22,12 @@ block content
 		})
 	+b-categories(categoryItems)
 	+b-brands-of-goods(brandsImages)
-	+b-feedback-form-wrap()
+	.feedback-form-wrap
+		+b-headline({
+			label: "Форма обратной связи",
+			title: "Остались вопросы?",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания",
+			titleClasses: "_color-white"
+		})
+
+		+b-feedback-form()

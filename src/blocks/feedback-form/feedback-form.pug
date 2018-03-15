@@ -2,7 +2,7 @@ mixin b-feedback-form()
 	+b("form").feedback-form(name="feedbackForm")
 		+e.col_left
 			+e.form-group
-				+e("select").form-control_select(required)
+				+e("select").form-control_select(required data-placeholder="Выберете салон*")
 					//- first option for placeholder select2
 					option.select-option
 					option.select-option Салон 1
