@@ -22,7 +22,7 @@ function magicLine() {
 			'backgroundColor': '#b19870',
 			'height': 4,
 			'width': magicLineWidth,
-			'bottom': 0,
+			'bottom': -1,
 			'left': 0
 		})
 
@@ -107,18 +107,77 @@ function toggleMainMenu() {
 
 function fixHeader() {
 	(function() {
-		var topHeader = $('.header__nav').get(0);
-		var headroom = new Headroom(topHeader, {
-		"offset": 205,
-		"tolerance": 5,
-		"classes": {
-			"initial": "animated",
-			"pinned": "slideDown",
-			"unpinned": "slideUp"
+		var $header = $('.header');
+		var headerOffset = $header.innerHeight();
+		$('body').css('padding-top', headerOffset);
+
+		var $headerNav = $header.find('.header__nav');
+		var headerNav = $headerNav.get(0);
+		var headerNavOffset = $headerNav.innerHeight();
+		var fixedHeaderNav = new Headroom(headerNav, {
+			"offset": headerNavOffset,
+			"tolerance": 10,
+			"classes": {
+				"pinned": "header__nav_pinned",
+				"unpinned": "header__nav_unpinned"
+			},
+			onPin : function() {
+				pinElem(this.elem);
+			},
+			onUnpin : function() {
+				unPinElem(this.elem);
+			},
+			onTop : function() {
+				TweenMax.set(this.elem, {y: '0%'});
+			},
+		});
+			
+		fixedHeaderNav.init();
+
+		var headerBody = $header.find('.header__body').get(0);
+		var fixedHeaderBody = new Headroom(headerBody, {
+			"offset": headerNavOffset,
+			"tolerance": 10,
+			"classes": {
+				"pinned": "header__body_unpinned",
+				"unpinned": "header__body_pinned"
+			},
+			onUnpin : function() {
+				pinElem(this.elem);
+			},
+			onPin : function() {
+				unPinElem(this.elem);
+			},
+			onTop : function() {
+				TweenMax.set(this.elem, {y: '0%'});
+			},
+		});
+			
+		fixedHeaderBody.init();
+
+		function pinElem(elem) {
+			TweenMax.fromTo(elem,1, {
+				x: '0',
+				y: '-100%',
+				ease: Power2.easeIn
+			}, {
+				x: '0',
+				y: '0%',
+				ease: Power2.easeOut
+			});
 		}
-	});
-		
-	headroom.init();
+
+		function unPinElem(elem) {
+			TweenMax.fromTo(elem, 1, {
+				x: '0',
+				y: '0%',
+				ease: Power2.easeIn
+			}, {
+				x: '0',
+				y: '-100%',
+				ease: Power2.easeOut
+			});
+		}
 	})();
 }
 
