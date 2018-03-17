@@ -1,13 +1,16 @@
 mixin b-blog(items)
 	.container
-		+b.blockl
-			+e.left
-				+e.titleb Блог сайта
-				+e.titles СМОТРЕТЬ ВИДЕО
-			+e.block1
+		+b-headline({
+			label: 'Наш блог',
+			title: 'Пишем и снимаем видео',
+			subtitle: 'Мы заботимся о красоте наших клиентов и передаем знания многим желающим'
+		})
 
-		+b.blockr
-			+e.right
-				+e.titleb Наши видео
-				+e.titles СМОТРЕТЬ ВИДЕО
-			+e.block2
+		+b.blog
+			+e.list
+				each item, i in items
+					- var classes = 'odd'
+					if (i % 2)
+						- classes = 'even'
+					+e.item
+						+b-category(item.url, item.title, item.subtitle, classes)

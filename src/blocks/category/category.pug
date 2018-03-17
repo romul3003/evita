@@ -1,9 +1,9 @@
-mixin b-category(imgUrl, title, subtitle)
+mixin b-category(imgUrl, title, subtitle, classes)
 	+b.category
 		+e("figure").img-wrap
 			+e("img").img(src=asset(imgUrl))
 
-		+e.content
+		+e.content(class=classes)
 			+e.title= title
 			+e.subtitle
 				+e("a").link(href="#")= subtitle
