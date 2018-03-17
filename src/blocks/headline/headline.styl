@@ -15,6 +15,10 @@
 		color: mainColor
 		font-size 20px
 		font-style: italic
+		
+		@media only screen and (max-width: smWidth - 1)
+			font-size 16px
+
 		&::before
 			content: "—"
 			margin-right .5em
@@ -46,6 +50,12 @@
 			
 		&_color-white
 			color white
+			
+		@media only screen and (max-width: lgWidth - 1)
+			font-size 44px
+			
+		@media only screen and (max-width: smWidth - 1)
+			font-size 30px
 
 		
 	&__subtitle
@@ -55,6 +65,9 @@
 		text-align center
 		margin-bottom 30px
 		font-size 18px
+		
+		@media only screen and (max-width: smWidth - 1)
+			font-size 16px
 		
 		&_align-left
 			text-align left
