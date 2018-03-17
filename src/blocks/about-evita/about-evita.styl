@@ -1,0 +1,52 @@
+.about-evita-wrap
+	position relative
+	margin-bottom 10%
+	
+	.container
+		position relative
+		z-index 6
+		
+	&::after
+		content ""
+		position absolute
+		left 0
+		top 20%
+		width 85%
+		height 95%
+		background-color light-gray
+		z-index 4
+
+.about-evita
+	width 70%
+	margin 0 auto
+	padding 7% 0
+	background-color mine-shaft
+	
+	&__content
+		width 50%
+		margin 0 auto
+
+	&__description
+		margin-bottom 2em
+		color dusty-gray
+		font-family futura
+		font-weight 600
+		
+	&__img-wrap
+		position absolute
+		bottom 0
+		width 300px
+		
+	&__img-wrap_left
+		left 0
+		text-align left
+		
+	&__img-wrap_right
+		right 0
+		text-align right
+	
+	&__img
+		display inline-block
+		vertical-align top
+		max-width 100%
+		height auto
