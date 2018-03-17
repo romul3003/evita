@@ -1,0 +1,10 @@
+extends layouts/main
+
+
+append params
+	- pageTitle = "Service | Evita "
+
+block content
+	+b-service(hairServices)
+	+b-categories(categoryItems)
+	+b-feedback-form()
