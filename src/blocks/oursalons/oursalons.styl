@@ -3,12 +3,22 @@
 		position relative
 		width 800px
 		margin 0 auto
+
+	&__container
+		margin 0 auto 310px auto
+
+		@media md
+			margin 0 auto
 		
 	&__menu
 		margin 0 auto
 		font-size 10px
 		background-color #f4f4f4 
 		width 500px
+		display none
+		
+		@media md
+			display flex
 
 	&__wrapper
 		position relative
@@ -28,7 +38,7 @@
 		margin-right 20px
 		margin-left 20px
 		color #a4a4a4
-
+		
 	&__select
 		font-family 'FuturaPT-Demi'
 		text-align center
@@ -41,20 +51,32 @@
 	&__topinfo
 		position absolute
 		z-index 1
-		width 220px
-		height 321px
+		height 221px
 		right 0px
 		bottom 0px
+		width 100%
+		top 410px
+
+		@media md
+			width 220px
+			height 321px
+			top 110px
+
 		
 	&__main
 		position absolute
 		background-color white
 		right 0
 		bottom 0
-		width 270px
-		height 300px
+		height 200px
+		width 100%
 		padding-top 25px
 		padding-left 30px
+		
+		@media md
+			height 300px
+			width 270px
+
 		
 	&__titlem
 		font-family 'FuturaPT-Demi'
@@ -63,6 +85,11 @@
 		font-family 'FuturaPT-Book'
 		font-size 17px
 		margin-top 5px
+		margin-right 150px
+		float left
+		@media md
+			float left
+			margin-right 0px
 
 	&__def
 		color black
@@ -96,7 +123,11 @@
 		height 70px
 		margin 0px auto
 		padding 26px 0 0 40px
-
+		display none
+		
+		@media md
+			display block
+		
 	&__pic
 		top 75px
 		background-image url("images/gallery-1.png")
@@ -183,7 +214,10 @@
 	justify-content space-around
 	top -32px
 	left 164px
-	display flex
 	font-size 11px
 	color #a4a4a4
 	width 59%
+	display none
+	
+	@media md
+		display flex
