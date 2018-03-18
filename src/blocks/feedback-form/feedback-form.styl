@@ -1,3 +1,17 @@
+.feedback-form-wrap
+	padding 8% 0
+	background-color #222
+	
+	@media all and (max-width: mdWidth - 1)
+		padding 8% 10px
+	
+	.headline
+		margin-bottom 50px
+		
+		@media all and (max-width: mdWidth - 1)
+			margin-bottom 25px
+
+	
 .feedback-form
 	width 750px
 	display flex
@@ -5,37 +19,65 @@
 	justify-content center
 	margin 0 auto
 	
+	@media all and (max-width: mdWidth - 1)
+		width 100%
+		flex-direction column
+	
 	&__col
 		flex 0 1 50%
 		padding 0 2%
+		
+		@media all and (max-width: mdWidth - 1)
+			flex 0 1 100%
+			padding 0
+			
+	&__col_left
+		@media all and (max-width: mdWidth - 1)
+			margin-bottom 2em
 		
 	&__form-control_textarea
 		width 100%
 		padding 30px
 		border: 1px solid #3f3f3f;
 		background-color transparent
-		color #fff
+		color white
 		text-transform uppercase
-		font-family 'FuturaPT-Book', Helvetica, Arial, sans-serif
+		font-family futura
 		font-size 12px
 		letter-spacing .7px
+		transition border-color .2s linear;
 		
 		&:focus
 			outline-style none
-			border-color #fff
+			border-color white
+			
+	&__form-group_label
+		position relative
+		display block
 		
 	&__form-control_input
+		position relative
 		display inline-block
 		width 100%
 		padding 1em 0
 		border-bottom 1px solid #3f3f3f
 		vertical-align middle
 		color #565656
-		font-family 'FuturaPT-Book', Helvetica, Arial, sans-serif
+		font-family futura
 		font-weight 400
+	
+	&__decorative-line
+		position: absolute;
+		top 100%
+		left 0
+		width 0
+		height 1px
+		background-color #fff
+		transition width .5s linear
 		
-		&:focus
-			border-bottom-color #fff
+	&__form-control_input:focus + &__decorative-line
+		width: 100%
+
 		
 	&__form-control_select
 		width 100%
@@ -43,3 +85,9 @@
 	.btn-main
 		margin-top 3em
 		
+		@media all and (max-width: mdWidth - 1)
+			align-self center
+			
+		@media all and (max-width: smWidth - 1)
+			width 100%
+			

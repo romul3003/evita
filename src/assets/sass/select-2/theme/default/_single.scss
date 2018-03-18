@@ -1,8 +1,26 @@
 .select2-selection--single {
+  position: relative;
   background-color: transparent;
   // border: 1px solid #aaa;
   border-bottom: 1px solid #3f3f3f;
   // border-radius: 4px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width .5s linear;
+  }
+
+  &:focus {
+    &::after {
+      width: 100%;
+    }
+  }
 
   .select2-selection__rendered {
     color: #676767;
