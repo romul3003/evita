@@ -1,6 +1,7 @@
 mixin b-categories(items)
-	.container
-		+b("ul").categories
-			each item in items
-				+e("li").item
-					+b-category(item.url, item.title, item.subtitle)
+	.categories-wrap
+		.container
+			+b("ul").categories
+				each item in items
+					+e("li").item
+						+b-category(item.url, item.title, item.subtitle)

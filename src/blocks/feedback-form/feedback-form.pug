@@ -10,19 +10,20 @@ mixin b-feedback-form()
 					option.select-option Салон 3
 					option.select-option Салон 4
 
-			+e.form-group
-				+e("input").form-control_input(placeholder="Введите Ваше имя" required
-)
+			+e("label").form-group_label
+				+e("input").form-control_input(placeholder="Введите Ваше имя" required)
+				+e.decorative-line
 
-			+e.form-group
+			+e("label").form-group_label
 				+e("input").form-control_input(type="tel" placeholder="Введите телефон")
+				+e.decorative-line
 
-			+e.form-group
-				+e("input").form-control_input(type="tel" placeholder="Введите email*" required
-)
+			+e("label").form-group_label
+				+e("input").form-control_input(type="email" placeholder="Введите email*" required)
+				+e.decorative-line
 
 		+e.col_right
 			+e.form-group
-				+e("textarea").form-control_textarea(rows="7" placeholder="Оставьте Ваше сообщение")
+				+e("textarea").form-control_textarea(rows="6" placeholder="Оставьте Ваше сообщение")
 
 		+b("button").btn-main Задать вопрос

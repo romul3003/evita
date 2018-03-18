@@ -6,7 +6,7 @@ append params
 	- activeMenuIndex = 1
 
 block content
-	section.title-section
+	.title-section
 		+b-headline({
 			label: "Категории услуг",
 			title: "Категории услуг",
@@ -15,5 +15,15 @@ block content
 	+b-categories(categoryItems)
 	+b-advantages(advantages)
 	+b-brands-of-goods(brandsImages)
+
+	.feedback-form-wrap
+		+b-headline({
+			label: "Форма обратной связи",
+			title: "Остались вопросы?",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания",
+			titleClasses: "_color-white"
+		})
+
+		+b-feedback-form()
 
 	+b-followinsta()

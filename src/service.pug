@@ -1,0 +1,29 @@
+extends layouts/main
+
+
+append params
+	- pageTitle = "Service | Evita "
+
+block content
+	+b-service(hairServices)
+	+b-categories(categoryItems)
+
+	.feedback-form-wrap
+		+b-headline({
+			label: "Форма обратной связи",
+			title: "Остались вопросы?",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания",
+			titleClasses: "_color-white"
+		})
+
+		+b-feedback-form()
+		
+	+b-best-masters({
+		title: "Первоклассные мастера с лучшим образованием в индустрии красоты",
+		SEO_block: "Блок для СЕО текста",
+		text_1: {
+			paragraph_1: "Путь к совершенству лежит через EVITA Studio of Beauty, а Ваши попутчики и единомышленники – наши специалисты.",
+			paragraph_2: "В EVITA Studio of Beauty, в атмосфере королевской роскоши и благополучия, Вы будете окружены почитанием и заботой, близкой к поклонению.",
+			paragraph_3: "С первой секунды, с первого взгляда и с полуслова мы будем улавливать Ваши желания и претворять их в жизнь."
+		}
+	})
