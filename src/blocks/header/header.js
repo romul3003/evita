@@ -203,6 +203,22 @@ function fixHeader() {
 				pinElem(this.elem);
 			},
 			onUnpin : function() {
+				// close header nav if open
+				if ($header.hasClass('header-open__for-nav')) {
+					TweenMax.staggerFromTo($navLinks, .6, {
+						autoAlpha: 1,
+						x: '40',
+						ease: Power2.easeOut
+					}, {
+						autoAlpha: 0,
+						x: '0',
+						ease: Power2.easeIn,
+						onComplete: function() {
+							$header.removeClass('header-open__for-nav');
+						}
+					}, 0.1);
+					$navLinks.attr('style', '');
+				}
 				unPinElem(this.elem);
 			},
 			onTop : function() {
@@ -222,20 +238,6 @@ function fixHeader() {
 				"unpinned": "header__body_pinned"
 			},
 			onUnpin : function() {
-				// close header nav if open
-				if ($header.hasClass('header-open__for-nav')) {
-					TweenMax.staggerFromTo($navLinks, .6, {
-						autoAlpha: 1,
-						x: '40',
-						ease: Power2.easeOut
-					}, {
-						autoAlpha: 0,
-						x: '0',
-						ease: Power2.easeIn
-					}, 0.1);
-					$navLinks.attr('style', '');
-					$header.removeClass('header-open__for-nav');
-				}
 				pinElem(this.elem);
 			},
 			onPin : function() {
