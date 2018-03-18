@@ -43,6 +43,7 @@
 	&__text
 		height 15px
 		padding-left 25px
+		font-family futura-bold
 		span
 			display block
 			transition transform .3s ease-in
@@ -53,25 +54,3 @@
 			transform translateX(0);
 		.burger__text span
 			transform translateY(-100%);
-.header-open
-	.burger
-		&__icon
-			overflow visible
-			&-center
-				opacity 0
-			&-top,
-			&-bottom
-				top 4px
-				bottom auto
-				&:before
-					content none
-			&-top
-				transform rotate(-45deg)
-			&-bottom
-				transform rotate(45deg)
-		&:hover
-			.burger__icon
-				&-top
-					transform rotate(-45deg)
-				&-bottom
-					transform rotate(45deg)

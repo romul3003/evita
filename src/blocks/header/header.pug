@@ -18,6 +18,8 @@ mixin b-header(data)
 				+e('a').logo
 					+e('img').logo-image(src=asset("images/logo.png"))
 				+e('ul').contacts
-					+e('li').mobile: +e('a')(href="tel:+7 (495) 787-00-57") +7 (495) 787-00-57
-		+e('nav').main-menu
+					+e('li').mobile
+						+e('a').mobile-num(href="tel:+7 (495) 787-00-57") +7 (495) 787-00-57
+						+e('a').mobile-icon: i(class="fas fa-phone")
+		+e.main-menu
 			+b-main-menu(data.mainMenu, data.services)
