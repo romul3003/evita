@@ -5,14 +5,14 @@ append params
 
 block main
 	block content
-	section.title-section
+	.title-section
 		+b-headline({
 			label: "Специальные предложения",
 			title: "Специальные предложения",
 			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
 		})
 	
-	section.title-section
+	.title-section
 		+b-headline({
 			label: "Категории услуг",
 			title: "Категории услуг",
@@ -22,7 +22,7 @@ block main
 			subtitleClasses: "_align-left",
 		})
 
-	section.title-section
+	.title-section
 		+b-headline({
 			headlineClasses: "_secondary-bg-color",
 			label: "Категории услуг",
@@ -42,3 +42,46 @@ block main
 	.demonstration-block
 		+b-button-transparent("Перейти к услугам")
 
+
+	.feedback-form-wrap
+		+b-headline({
+			label: "Форма обратной связи",
+			title: "Остались вопросы?",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания",
+			titleClasses: "_color-white"
+		})
+
+		+b-feedback-form()
+
+	.about-evita-wrap
+		.container
+			+b.about-evita
+				+e.content
+					+b-headline({
+						label: "Об Evita Studio",
+						title: "Об Evita Studio",
+						subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим",
+						labelClasses: "_align-left",
+						titleClasses: "_color-white _align-left",
+						subtitleClasses: "_color-white _align-left"
+					})
+
+					+e.description В EVITA Studio of Beauty, в атмосфере королевской роскоши и благополучия, Вы будете окружены почитанием и заботой, близкой к поклонению. С первой секунды, с первого взгляда и с полуслова мы будем улавливать Ваши желания и претворять их в жизнь.
+				
+					+b-button-main("Читать подробнее")
+
+				+e("figure").img-wrap_left
+					+e("img").img(src=asset("images/about-evita-1.jpg"))
+
+				+e("figure").img-wrap_right
+					+e("img").img(src=asset("images/about-evita-2.jpg"))
+
+	+b-best-masters({
+		title: "Первоклассные мастера с лучшим образованием в индустрии красоты",
+		SEO_block: "Блок для СЕО текста",
+		text_1: {
+			paragraph_1: "Путь к совершенству лежит через EVITA Studio of Beauty, а Ваши попутчики и единомышленники – наши специалисты.",
+			paragraph_2: "В EVITA Studio of Beauty, в атмосфере королевской роскоши и благополучия, Вы будете окружены почитанием и заботой, близкой к поклонению.",
+			paragraph_3: "С первой секунды, с первого взгляда и с полуслова мы будем улавливать Ваши желания и претворять их в жизнь."
+		}
+	})

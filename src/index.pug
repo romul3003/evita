@@ -6,20 +6,58 @@ append params
 	- activeMenuIndex = 0
 
 block content
+	+b-headline("Наши салоны", "Наши салоны", "Мы заботимся о красоте наших клиентов и передаем знания")
 	+b-mainfirstblock()
+	+oursalons()
 
-	section.title-section
+	.title-section
 		+b-headline({
 			label: "Специальные предложения",
 			title: "Специальные предложения",
 			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
 		})
 	
-	section.title-section
+	.title-section
 		+b-headline({
 			label: "Категории услуг",
 			title: "Категории услуг",
 			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
 		})
 	+b-categories(categoryItems)
+
+	.about-evita-wrap
+		.container
+			+b.about-evita
+				+e.content
+					+b-headline({
+						label: "Об Evita Studio",
+						title: "Об Evita Studio",
+						subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим",
+						labelClasses: "_align-left",
+						titleClasses: "_color-white _align-left",
+						subtitleClasses: "_color-white _align-left"
+					})
+
+					+e.description В EVITA Studio of Beauty, в атмосфере королевской роскоши и благополучия, Вы будете окружены почитанием и заботой, близкой к поклонению. С первой секунды, с первого взгляда и с полуслова мы будем улавливать Ваши желания и претворять их в жизнь.
+				
+					+b-button-main("Читать подробнее")
+
+				+e("figure").img-wrap_left
+					+e("img").img(src=asset("images/about-evita-1.jpg"))
+
+				+e("figure").img-wrap_right
+					+e("img").img(src=asset("images/about-evita-2.jpg"))
+
 	+b-brands-of-goods(brandsImages)
+
+	.feedback-form-wrap
+		+b-headline({
+			label: "Форма обратной связи",
+			title: "Остались вопросы?",
+			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания",
+			titleClasses: "_color-white"
+		})
+
+		+b-feedback-form()
+
+	+b-followinsta()

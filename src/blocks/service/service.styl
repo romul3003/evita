@@ -1,0 +1,82 @@
+.service
+  padding-top 90px
+  font-family futura
+  &__row
+    width 1070px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+    padding 80px 15px
+    justify-content center
+  &__block
+    display flex
+    width 100%
+    padding-top 30px
+    padding-bottom 30px
+    border-bottom 1px solid mercury
+    position relative
+    //for accordion animation
+    overflow hidden
+    &:hover
+      border-bottom 1px solid dove-gray
+      .service__title
+        color dove-gray
+      .arrow
+        &:before,
+        &:after
+          background-color dove-gray
+    &.open
+      border-bottom 1px solid sandal
+      .service__title
+        color sandal
+      .arrow
+        transform: rotate(-90deg);
+        &:before,
+        &:after
+          background-color sandal
+  &__title
+    font-family futura-heavy
+    width 25%
+    font-size 26px
+    color mercury
+    padding-right: 15px;
+  &__lists
+    width 75%
+    padding-bottom 30px
+    .inline-list
+      display flex
+
+      &:hover
+        color sandal
+      &__item
+        &-name
+          width 50%
+        &-time
+          width 25%
+        &-price
+          width 25%
+
+.arrow
+  visibility: hidden
+  position absolute
+  right 0
+  width: 10px;
+  height: 25px;
+  transition transform .2s;
+
+  &:before,
+  &:after
+    display: inline-block
+    position: absolute
+    visibility: visible
+    content: " "
+    width: 2px
+    height: 8px
+    background-color: mercury
+    top: 10px
+  &:before
+    transform: rotate(-45deg)
+    right: 10px
+  &:after
+    transform: rotate(45deg)
+    right: 5px

@@ -1,99 +1,229 @@
-.header
-	&__nav
-		position relative
-		border-bottom 1px solid mercury
-		font-size 10px
-		font-weight 700
-		font-family futura
-		letter-spacing 1.1px
-		text-transform uppercase
-	&__search
-		position absolute
-		top 0
-		left 0
-		height 100%
-		border-right 1px solid mercury
-		&-label
-			background transparent url(images/search-icon.png) center/contain no-repeat
-			width 11px
-			height 11px
-			display block
-			margin 27px 33px
-			cursor pointer
-		&-input
-			display none
-	&__menu
-		margin 0 auto
-	&__action
-		position absolute
-		top 0
-		right 0
-		@extend .button_full
-		padding 27px
-		height 64px
+.footer
+	@extend .container
+	position relative
+	@media lg
+		margin-top -200px
+	@media xxl
+		margin-top -305px
+	&__subscribe
+		padding 8px
+		background-color white
+		text-align center
+		@media md
+			padding 20px
+			display flex
+			align-items flex-end
+			text-align left
+		@media lg
+			padding 30px 40px
+			margin-left 65px
+			margin-bottom -65px
+			width calc(100% - 65px)
+			position relative
+			z-index 1
+		@media xxl
+			padding 60px 80px
+			margin-left 130px
+			margin-bottom -95px
+			width calc(100% - 130px)
+		&-title
+			font-family futura-heavy
+			@media md
+				flex 0 1 33%
+				margin-bottom -10px
+			@media lg
+				padding-right 20px
+			@media xxl
+				flex 0 1 25%
+				padding-right 50px
+		input
+			flex-grow 1
+			width 210px
+			margin-right 10px
+			margin-bottom 10px
+			@media md
+				margin-right 50px
+				margin-bottom 0
+			&:focus
+				color darken(dove-gray, 30%)
+		&-submit
+			width 210px
+	&__body-wrapper
+		background-color cod-gray
+		@media lg
+			padding-top 65px
+			margin-right calc(50% - 50vw)
+		@media xxl
+			padding-top 95px
 	&__body
-		display flex
-		justify-content space-between
-		align-items center
 		@extend .container
-		position relative
-		padding-top 37px
-	&__burger
-		position relative
-		font-size 10px
-		font-weight 700
+		padding 10px
+		font-size 14px
+		color dove-gray
 		font-family futura
-		letter-spacing 1.1px
-		text-transform uppercase
-		border 0
-		background-color transparent
-	&__logo
-		position absolute
-		top 30px
-		left calc(50% - 58px)
-		img
-			max-width 115px
-	&__contacts
+		@media sm
+			display flex
+			flex-wrap wrap
+		@media md
+			padding 10px 20px 0
+		@media lg
+			padding 45px 0 0 65px
+			margin-left 0
+		@media xxl
+			padding 90px 0 0 130px
+		> div
+			margin-bottom 10px
+			@media md
+				margin-bottom 15px
+		a,
+		a:visited,
+		a:active
+			color dove-gray
+			transition color .3s
+		a:hover 
+			@media lg
+				color lighten(dove-gray, 50%)
+	&__description
+		@media xxl
+			flex 0 1 20%
+	&__description-content
+		font-family futura
+		font-size 12px
+		@media md
+			font-size 15px
+		p
+			margin-bottom 10px
+			@media xxl
+				margin-bottom 30px
+	&__subtitle
+		color white
+		font-family futura-heavy
 		font-size 16px
-		font-weight 400
-		font-family futura
+		@media md
+			font-size 20px
+			margin-bottom 20px
+		@media xl
+			margin-bottom 40px
+	&__services,
+	&__links,
+	&__salons,
+	&__contacts
+		@media sm
+			flex 0 1 50%
+		@media md
+			flex 0 1 25%
+		@media xxl
+			flex 0 1 11%
+			margin-left 9%
+	&__contacts
+		p
+			margin-bottom 5px
+			@media md
+				margin-bottom 10px
+			@media xxl
+				margin-bottom 30px
+		a
+			@media md
+				display block
+	&__socials
+		display flex
+		&-icon
+			border 1px solid dove-gray
+			color dove-gray
+			width 34px
+			height 34px
+			margin-right 10px
+			padding 9px
+			font-size 11px
+			text-align center
+			&:hover
+				border-color sandal
+				color white
+	&__legal-info
+		border-top 1px solid mine
 		position relative
-		padding-right 17px
-		a 
-			color black
-		&:after
+		padding-top 10px
+		@media sm
+			flex 1 1 100%
+		@media md
+			margin-bottom 0
+		@media xxl
+			display flex
+			justify-content space-between
+			padding 40px 0 25px
+		&:before
 			content ''
 			position absolute
-			top calc(50% - 2px)
-			right 0
-			display inline-block
-			width 6px
-			height 4px
-			background transparent url(images/bottom-arrow.png) center/contain no-repeat
-	&__main-menu
-		display none
-		position fixed
-		z-index 1
-		top 0
-		left 0
-		width 100%
-		height 100vh
+			top -6px
+			left 50%
+			transform translateX(-50%)
+			width 47px
+			height 10px
+			background transparent url(images/footer-arr.png) center/contain no-repeat
+	&__legal-links
+		@media md
+			display flex
+			justify-content space-between
+			li:nth-child(2n - 1)
+				display none
+		li
+			@media xxl
+				margin-left 40px
+	&__partners
+		@media lg
+			display flex
+			margin-left 360px
+	&__logo
 		background-color mine-shaft
-		overflow-y scroll
-	&-open
-		.header__main-menu
-				display block
-				
-	
+		position absolute
+		left 0
+		bottom 0
+		padding 10px
+		width 50%
+		text-align center
+		@media lg
+			top 0
+			margin-left calc(50% - 50vw)
+			z-index -1
+			width 100%
+		img
+			@media lg
+				position absolute
+				bottom 20px
+				left calc(50vw - 50% + 65px);
+			@media xxl
+				bottom 31px
+				left calc(50vw - 50% + 130px);
+	&__payment-methods
+		display flex
+		flex-wrap wrap
+		padding 20px 0
+		background-color white
+		@media lg
+			padding 0
+			justify-content space-between
+		li:nth-child(2n)
+			flex 1
+			margin 0 10px
+			@media lg
+				padding 20px 0
+			@media xl
+				margin 0 25px
+			@media xxl
+				padding 34px 0
+				margin 0 50px
+	&__creds
+		font-size 15px
+		font-family futura
+		margin-left 50%
+		text-align center
+		padding 23px 10px
+		background-color white
+		@media lg
+			margin-left 0
+			padding 20px 0
+			flex 1
+		@media xxl
+			padding 34px 0
 		
-			
-
-
-
-
-
-
-
-
-
-
+		
