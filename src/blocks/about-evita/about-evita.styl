@@ -2,10 +2,20 @@
 	position relative
 	margin-bottom 10%
 	
+	@media all and (max-width: xlWidth - 1)
+		margin-bottom 14%
+		
+	@media all and (max-width: mdWidth - 1)
+		margin-bottom 10%
+	
 	.container
 		position relative
 		z-index 6
 		
+		@media all and (max-width: xlWidth - 1)
+			padding: 0 10px
+			
+
 	&::after
 		content ""
 		position absolute
@@ -15,6 +25,17 @@
 		height 95%
 		background-color light-gray
 		z-index 4
+		
+		@media all and (max-width: xlWidth - 1)
+			height 92%
+			
+		@media all and (max-width: xlWidth - 1)
+			top 10%
+			width 70%
+			height 100%
+			
+		@media all and (max-width: mdWidth - 1)
+			display none
 
 .about-evita
 	width 70%
@@ -22,9 +43,22 @@
 	padding 7% 0
 	background-color mine-shaft
 	
+	@media all and (max-width: mdWidth - 1)
+		width 85%
+		
+	@media all and (max-width: mdWidth - 1)
+		width 100%
+	
 	&__content
 		width 50%
 		margin 0 auto
+		
+		@media all and (max-width: xlWidth - 1)
+			font-size 18px
+			
+
+		@media all and (max-width: lgWidth - 1)
+			width 75%
 
 	&__description
 		margin-bottom 2em
@@ -37,13 +71,25 @@
 		bottom 0
 		width 300px
 		
+		@media all and (max-width: xlWidth - 1)
+			width 270px
+			
+		@media all and (max-width: lgWidth - 1)
+			display none
+		
 	&__img-wrap_left
 		left 0
 		text-align left
 		
+		@media all and (max-width: xlWidth - 1)
+			left 10px
+		
 	&__img-wrap_right
 		right 0
 		text-align right
+		
+		@media all and (max-width: xlWidth - 1)
+			right 10px
 	
 	&__img
 		display inline-block
