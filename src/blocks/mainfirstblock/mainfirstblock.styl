@@ -1,27 +1,46 @@
 .mainfirstblock
 	.wrapper
-		margin-top 50px
+		margin-top 30px
+		margin-bottom 120px
 		position relative
-		min-height 600px
-		
+		min-height 740px
+		overflow hidden
+		@media lg
+			margin-top 50px
+			min-height 600px
+			overflow visible
+			position relative
+			
 	&__text
-		max-width 40%
+		max-width 100%
+		@media lg
+			max-width 40%
 		
 			
 	&__image
 		position absolute
-		top 50px
-		left calc(50% - 82px)
+		height 90%
+		top 250px
+		left 0px
 		z-index -1
+		@media lg
+			left calc(50% - 82px)
+			height 90%
+			top 40px
 		&:before 
 			width 100%
-			height 100%
 			content ''
 			position absolute
-			top -70px
 			background-color #f4f4f4
 			z-index -2
 			left -115px
+			top 140px
+			height 100%
+			overflow hidden
+			@media lg
+				position absolute
+				top -70px
+				overflow hidden
 
 	&__pic
 		width 100%
@@ -73,12 +92,19 @@
 		color #b19870
 		font-size 15px
 		font-style: italic
+		text-align center
+		@media lg
+			text-align left
 
 	&__main-title
 		font-family 'Playfair Display', "Times New Roman", Georgia, serif
 		font-weight normal
 		font-size 54px
 		line-height 64px
+		text-align center
+		@media lg
+			text-align left
+			
 
 	&__subtitle
 		max-width 75%
@@ -86,3 +112,19 @@
 		line-height 25px
 		margin-top 12px
 		margin-bottom 32px
+		text-align center
+		margin-left: 18%;
+		@media lg
+			text-align left
+			margin-left: 0%;
+			
+	&__subscribe
+		margin 0
+		width 100%
+		@media lg
+			margin 0 auto
+			width 35%
+
+
+
+
