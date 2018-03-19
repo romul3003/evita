@@ -1,0 +1,29 @@
+mixin b-special-offers()
+  +b('section').special-offers
+    section.title-section
+      +b-headline({
+          label: "Специальные предложения",
+          title: "Специальные предложения",
+          subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
+      })
+    .container
+      +e.slider
+        +e.myslick
+          div
+            img(src='assets/images/special-offers/special-offer-1.jpg')
+          div
+            img(src='assets/images/special-offers/special-offer-2.jpg')
+          div
+            img(src='assets/images/special-offers/special-offer-3.jpg')
+        +e.description
+          +e.title Внимание акция до февраля!  Час тайского массажа в подарок
+          +e.subtitle Мы заботимся о красоте наших клиентов и передаем знания многим желающим. Наша цель - нести в мир красоту и радость.
+          +e('button').button.button_full Записаться в салон
+          +e('button').button.button_empty Перейти к услугам
+        +e.bullets
+          +e.line
+            +e('span').left-num 01
+            +e('span').wra
+              +e('span').lines
+              +e('span').lineb
+            +e('span').right-num 03
