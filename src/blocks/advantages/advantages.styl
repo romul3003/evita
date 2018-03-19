@@ -1,0 +1,54 @@
+.advantages
+	padding 45px 20px 0
+	margin-bottom 60px
+	background-color mine-shaft
+	@media md
+		padding-top 65px
+		margin-bottom 100px
+	@media xl
+		padding-top 105px
+		margin-bottom 140px
+	@media xxl
+		padding-top 145px
+		margin-bottom 200px
+	&-list
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items stretch
+		@media lg
+			flex-wrap nowrap
+		&__item
+			margin-bottom 20px
+			max-width calc(50% - 10px)
+			position relative
+			top 35px
+			background-color mine
+			transition background-color .3s
+			@media lg
+				top 45px
+				max-width calc(25% - 20px)
+				&:before
+					content ''
+					position absolute
+					width 25px
+					top 40%
+					display block
+					height 1px
+					background-color sandal
+					left -12.5px
+					transition left .3s
+					z-index 1
+				&:hover
+					background-color white
+					&:before
+						left calc(100% - 13.5px)
+					.advantage__title
+						color sandal
+			@media xl
+				top 65px
+				max-width calc(25% - 40px)
+			@media xxl
+				top 75px
+				max-width calc(25% - 80px)
+			

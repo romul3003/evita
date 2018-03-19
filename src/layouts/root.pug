@@ -1,12 +1,15 @@
 include ../../node_modules/bemto.pug/bemto
 
 include ../globals/common
-
+include ../globals/data/data
+include ../globals/data/brands-images
+include ../globals/data/hair-services
 include ../blocks/all
 
 block params
 	- var pageTitle = "Головна"
-   
+	- var activeMenuIndex = 0
+
 doctype html
 html
 	head

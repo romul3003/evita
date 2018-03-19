@@ -1,0 +1,182 @@
+.menu
+	padding-top 12%
+	padding-left 30px
+	margin 0 auto
+	@media sm
+		display flex
+		flex-wrap wrap
+	@media md
+		display flex
+	@media lg
+		display flex
+		justify-content flex-end
+		flex-wrap nowrap
+	@media xl
+		display flex
+		max-width 1040px
+	@media xxl
+		padding-top 15.3%
+	&__close-btn
+		position fixed
+		top 27px
+		left 10px
+		height 12px
+		width 12px
+		background-color transparent
+		outline none
+		border 0
+		cursor pointer
+		@media lg
+			top 109px
+			left calc(50% - 960px / 2)
+		@media xl
+			left calc(50% - 1170px / 2)
+		@media xxl
+			left calc(50% - 1530px / 2)
+		&:before,
+		&:after
+			content ''
+			position absolute
+			height 2px
+			width 15px
+			top 4px
+			left 0
+			background-color sandal
+			transition transform 1s
+		&:before
+			transform rotate(45deg)
+		&:after
+			transform rotate(-45deg)
+	&__links
+		margin-bottom 15px
+		@media sm
+			width 50%
+			margin-bottom 30px
+			display flex
+			flex-direction column
+			align-items flex-start
+		@media lg
+			width 37.6%
+	&__link
+		display block
+		font-family  futura-heavy
+		color sandal
+		@media lg
+			font-size 37px
+			margin-bottom 25px
+	&__services
+		margin-bottom 15px
+		@media sm
+			width 50%
+			margin-bottom 30px
+			display flex
+			flex-direction column
+			align-items flex-start
+		@media lg
+			width 33%
+			padding-top 6px
+	&__service
+		display block
+		font-family playfair
+		font-weight 400
+		color gray
+		@media sm
+			margin-bottom 9px
+		@media lg
+			font-size 24px
+			margin-bottom 38px
+	&__contacts
+		max-width 230px
+		@media sm
+			flex-basis 100%
+			max-width none
+		@media lg
+			flex-basis 29%
+			width 29%
+			padding-top 16px
+	&__contacts-title
+		margin-bottom 15px
+		font-family futura-heavy
+		font-size 20px
+		line-height 1.25
+		color white
+		@media sm
+			flex 0 1 50%
+		@media lg
+			margin-bottom 23px
+			font-size 24px
+	&__socials-wrapper
+		@media sm
+			display flex
+			margin-bottom 15px
+		@media lg
+			flex-direction column
+			margin-bottom 0
+	&__socials
+		display flex
+		margin-bottom 18px
+		@media lg
+			margin-bottom 81px
+		&-icon
+			border 1px solid dove-gray
+			color dove-gray
+			width 34px
+			height 34px
+			margin-right 10px
+			padding 9px
+			font-size 11px
+			text-align center
+			&:hover
+				border-color sandal
+				color white
+	&__form-wrapper
+		@media sm
+			display flex
+		@media lg
+			flex-direction column
+	&__subscribe
+		display flex
+		flex-direction column
+		max-width 230px
+		@media sm
+			flex-grow 1
+		@media lg
+			flex-direction column
+		input
+			margin-bottom 31px
+			&:focus
+				color white
+		&-submit
+			color white
+.header-open
+	.menu__close-btn
+		&:before
+			transform rotate(-45deg)
+		&:after
+			transform rotate(45deg)
+		&:hover
+			&:before
+				transform none
+			&:after
+				transform none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+.about-evita-wrap
+	position relative
+	margin-bottom 10%
+	
+	@media all and (max-width: xlWidth - 1)
+		margin-bottom 14%
+		
+	@media all and (max-width: mdWidth - 1)
+		margin-bottom 10%
+	
+	.container
+		position relative
+		z-index 6
+		
+		@media all and (max-width: xlWidth - 1)
+			padding: 0 10px
+			
+
+	&__chisel
+		content ""
+		position absolute
+		left 0
+		top 20%
+		width 0
+		height 95%
+		background-color light-gray
+		z-index 4
+		
+		@media all and (max-width: xlWidth - 1)
+			height 92%
+			
+		@media all and (max-width: xlWidth - 1)
+			top 10%
+			// width 70%
+			height 100%
+			
+		@media all and (max-width: mdWidth - 1)
+			display none
+
+.about-evita
+	width 70%
+	margin 0 auto
+	padding 7% 0
+	background-color mine-shaft
+	
+	@media all and (max-width: mdWidth - 1)
+		width 85%
+		
+	@media all and (max-width: mdWidth - 1)
+		width 100%
+	
+	&__content
+		width 50%
+		margin 0 auto
+		
+		@media all and (max-width: xlWidth - 1)
+			font-size 18px
+			
+
+		@media all and (max-width: lgWidth - 1)
+			width 75%
+
+	&__description
+		margin-bottom 2em
+		color dusty-gray
+		font-family futura
+		font-weight 600
+		
+	.btn-main
+		@media all and (max-width: smWidth - 1)
+			width 100%
+			
+		
+	&__img-wrap
+		position absolute
+		bottom 0
+		width 300px
+		
+		@media all and (max-width: xlWidth - 1)
+			width 270px
+			
+		@media all and (max-width: lgWidth - 1)
+			display none
+		
+	&__img-wrap_left
+		left -50vw
+		text-align left
+		
+		// @media all and (max-width: xlWidth - 1)
+		// 	left 10px
+		
+	&__img-wrap_right
+		right -50vw
+		text-align right
+		
+		// @media all and (max-width: xlWidth - 1)
+		// 	right 10px
+	
+	&__img
+		display inline-block
+		vertical-align top
+		max-width 100%
+		height auto
