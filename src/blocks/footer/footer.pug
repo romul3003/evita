@@ -1,0 +1,54 @@
+mixin b-footer(data)
+	+b('footer').footer
+		+e('form').subscribe
+			+e.subscribe-title Узнайте о выгодных предложениях первыми
+			+e('input')(type="email" id="footer__subscribe" placeholder="Введите ваш почтовый адрес")
+			+e('button')(type="submit").subscribe-submit.button_full ПОДПИСАТЬСЯ
+		+e.body-wrapper
+			+e.body
+				+e.description 
+					+e('h5').subtitle Текст для SEO
+					+e.description-content 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+						p ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+				+e.services 
+					+e('h5').subtitle Услуги салона
+					+e('ul')
+						each link in data.services
+							li
+								+e('a').service(href=link.url)= link.title
+				+e.links
+					+e('h5').subtitle Навигация
+					+e('ul')
+						each link in data.links
+							li: +e('a').link(href=link.url)= link.title
+				+e.contacts
+					+e('h5').subtitle Контакты
+					+e('p') Общие вопросы:
+						a(href="mailto:info@evitastudio.ru") info@evitastudio.ru
+					+e('p') По вопросам рекламы:
+						a(href="mailto:pr@evitastudio.ruu") pr@evitastudio.ru
+					+e('ul').socials
+						+e('li').socials-icon: +e('i').icon.fab.fa-facebook-f
+						+e('li').socials-icon: +e('i').icon.fab.fa-vk
+						+e('li').socials-icon: +e('i').icon.fab.fa-instagram
+				+e.salons
+					+e('h5').subtitle Салоны
+					+e('ul')
+						each link in data.salons
+							li
+								+e('a').link(href=link.url)= link.title
+				+e.legal-info
+					+e.copy Evita Studio ©2018 Копирование информации только со ссылкой на источник
+					+e('ul').legal-links
+						each link in data.legalInfo
+							li
+								+e('a')(href=link.url)= link.title
+		+e.partners
+			+e.logo
+				img(src=asset("images/logo_white.png"))
+			+e('ul').payment-methods
+				each img in data.payments
+					li
+						+e('img')(src=asset(img.src) alt=img.alt)
+			+e.creds Сделано в 404

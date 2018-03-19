@@ -1,18 +1,33 @@
 .header
+	position fixed
+	top 0
+	left 0
+	right 0
+	z-index 11
+	overflow hidden
 	&__nav
 		position relative
 		border-bottom 1px solid mercury
 		font-size 10px
-		font-weight 700
-		font-family futura
+		font-family futura-heavy
 		letter-spacing 1.1px
 		text-transform uppercase
+		background-color white
+		&_pinned:not(.headroom--top)
+			position fixed
+			top 0
+			left 0
+			right 0
+			z-index 11
 	&__search
 		position absolute
 		top 0
 		left 0
 		height 100%
 		border-right 1px solid mercury
+		display none
+		@media sm
+			display block
 		&-label
 			background transparent url(images/search-icon.png) center/contain no-repeat
 			width 11px
@@ -30,50 +45,74 @@
 		right 0
 		@extend .button_full
 		padding 27px
-		height 64px
+		height 65px
+		width 50%
+		@media sm
+			width auto
 	&__body
+		position relative
+		padding 20px 10px
+		background-color white
+		@media lg
+			padding 37px 0
+		&_pinned:not(.headroom--top)
+			position fixed
+			top 0
+			left 0
+			right 0
+			z-index 11
+			padding 20px 10px
+			border-bottom 1px solid mercury
+			@media lg
+				padding 20px 0
+	&__body-inner
 		display flex
 		justify-content space-between
 		align-items center
 		@extend .container
-		position relative
-		padding-top 37px
 	&__burger
 		position relative
 		font-size 10px
-		font-weight 700
-		font-family futura
+		font-family futura-heavy
 		letter-spacing 1.1px
 		text-transform uppercase
 		border 0
 		background-color transparent
 	&__logo
 		position absolute
-		top 30px
+		top calc(50% - 16px)
 		left calc(50% - 58px)
 		img
 			max-width 115px
 	&__contacts
 		font-size 16px
-		font-weight 400
 		font-family futura
 		position relative
-		padding-right 17px
-		a 
-			color black
-		&:after
-			content ''
-			position absolute
-			top calc(50% - 2px)
-			right 0
-			display inline-block
-			width 6px
-			height 4px
-			background transparent url(images/bottom-arrow.png) center/contain no-repeat
-	&__main-menu
+		@media sm
+			padding-right 17px
+	&__mobile-num 
+		color black
 		display none
+		@media sm
+			display inline
+			&:after
+				content ''
+				position absolute
+				top 50%
+				transform translateY(-50%)
+				right 0
+				width 6px
+				height 4px
+				background transparent url(images/bottom-arrow.png) center/contain no-repeat
+	&__mobile-icon 
+		color sandal
+		@media sm
+			display none
+	&__main-menu
+		visibility hidden
+		opacity 0
 		position fixed
-		z-index 1
+		z-index 11
 		top 0
 		left 0
 		width 100%
@@ -81,8 +120,13 @@
 		background-color mine-shaft
 		overflow-y scroll
 	&-open
+		overflow visible
 		.header__main-menu
 				display block
+	&-open__for-nav
+		overflow visible
+		.header__nav
+			z-index 3
 				
 	
 		

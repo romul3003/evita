@@ -43,11 +43,7 @@ $(document).ready(function(){
 
     $('.slick-next.slick-arrow').html('');
     $('.slick-prev.slick-arrow').html('');
-
-	console.log('jQuery is ready!');
-	$('.header__burger').click(function(e) {
-		$('.header').toggleClass('header-open');
-	})
+    
 });
 
 $(".accordion-btn").each(function(index, element){
