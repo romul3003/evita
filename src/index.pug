@@ -8,15 +8,7 @@ append params
 block content
 	+b-headline("Наши салоны", "Наши салоны", "Мы заботимся о красоте наших клиентов и передаем знания")
 	+b-mainfirstblock()
-	+oursalons()
-
-	.title-section
-		+b-headline({
-			label: "Специальные предложения",
-			title: "Специальные предложения",
-			subtitle: "Мы заботимся о красоте наших клиентов и передаем знания многим желающим"
-		})
-	
+	+b-special-offers()
 	.title-section
 		+b-headline({
 			label: "Категории услуг",
@@ -49,7 +41,7 @@ block content
 
 				+e("figure").img-wrap_right
 					+e("img").img(src=asset("images/about-evita-2.jpg"))
-
+	+oursalons()
 	+b-brands-of-goods(brandsImages)
 
 	+b-blog(blogItems)
