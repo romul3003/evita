@@ -11,7 +11,6 @@ var concat = require('gulp-concat');
 var moduleBgFix = require('./moduleBgFix');
 
 var processors = [
-	// moduleBgFix(),
 	autoprefixer({browsers: ['last 2 version']})
 ];
 
@@ -26,7 +25,6 @@ gulp.task('html', function(){
 		.pipe(pug())
 		.pipe(gulp.dest('build'))
 });
-
 
 gulp.task('js', function(){
 	return gulp.src(['src/assets/*.js', 'src/blocks/**/*.js'])
@@ -43,10 +41,10 @@ gulp.task('css', function(){
 });
 
 gulp.task('sass', function () {
-  return gulp.src(['src/assets/sass/*/*.scss', 'src/assets/sass/*/*.sass'])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/assets'))
-    .pipe(browserSync.stream());
+	return gulp.src(['src/assets/sass/*/*.scss', 'src/assets/sass/*/*.sass'])
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('build/assets'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('vendor-js', function() {
@@ -62,11 +60,11 @@ gulp.task('vendor-css', function() {
 });
 
 gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./build"
-        }
-    });
+	browserSync.init({
+		server: {
+			baseDir: "./build"
+		}
+	});
 });
 
 var reload = function(done){
