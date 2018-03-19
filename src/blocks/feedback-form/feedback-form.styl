@@ -1,4 +1,20 @@
+// $keyframe-name = pulse
+// @keyframes {$keyframe-name}
+// 	for i in 0..1
+// 		{100% * i}
+// 			height (100% * i)
+
+@keyframes pulse {
+  0% {
+    top: -100%
+  }
+  100% {
+    top: 100%
+  }
+}
+ 
 .feedback-form-wrap
+	position relative
 	padding 8% 0
 	background-color #222
 	
@@ -10,6 +26,44 @@
 		
 		@media all and (max-width: mdWidth - 1)
 			margin-bottom 25px
+			
+	.pulse-line
+		content ""
+		position absolute
+		width 1px
+		height 115px
+		top 100%
+		left 50%
+		transform translate(-50%, -50%)
+		background-color mainColor
+		overflow hidden
+		// transition top .3s
+		
+		@media all and (max-width: lgWidth - 1)
+			height 80px
+			
+		@media all and (max-width: mdWidth - 1)
+			height 50px
+			
+		@media all and (max-width: smWidth - 1)
+			display none
+			
+		&::after
+			content ""
+			position absolute
+			width 1px
+			height 100%
+			top -100%
+			background-color gray
+			
+	&:hover
+		.pulse-line
+			&::after
+				animation-name pulse
+				animation-duration: 1s;
+				animation-timing-function ease-in-out
+				animation-iteration-count infinite
+				
 
 	
 .feedback-form
