@@ -1,0 +1,157 @@
+.special-offers
+  padding-bottom 90px
+  &__slider
+    position relative
+    width 1070px
+    margin 0 auto
+
+  &__menu
+    margin 0 auto
+    font-size 10px
+    background-color #f4f4f4
+    width 500px
+
+  &__wrapper
+    position relative
+    display flex
+    justify-content center
+
+
+  &__item1
+  &__item2
+  &__item3
+
+    font-family 'FuturaPT-Demi'
+    text-align center
+    text-transform uppercase
+    letter-spacing 1px
+    margin-right 20px
+    margin-left 20px
+    color #a4a4a4
+
+
+  &__description
+    width 50%
+    position absolute
+    background-color white
+    z-index 2
+    right 0
+    bottom 65px
+    padding 80px 20px 80px 90px
+
+  &__title
+    font-family 'FuturaPT-Demi'
+
+  &__subtitle
+    font-family 'FuturaPT-Book'
+    font-size 17px
+    margin-top 5px
+
+  &__button
+    margin-top 30px
+    + .button
+      margin-left 30px
+  &__navi
+    position absolute
+    background-color white
+    left 0
+    bottom 0
+    width 150px
+    height 60px
+    z-index 2
+
+  &__hline
+    position absolute
+    left 68px
+    top 18px
+    width 1px
+    height 24px
+    background-color mercury
+
+  &__bullets
+    background-color light-gray
+    width 500px
+    height 130px
+    display flex
+    align-items center
+    padding-left 75px
+    margin-left 150px
+
+
+  &__myslick
+    width 100%
+
+  &__line
+    display flex
+    flex-direction: row
+    align-items center
+    width 200px
+    height 30px
+
+  &__left-num
+  &__right-num
+    font-family 'FuturaPT-Demi'
+    font-size 12px
+    color #767676
+
+  &__lines
+    position absolute
+    width 31px
+    height 1px
+    background-color sandal
+    z-index 5
+    margin-left 0
+
+  &__lineb
+    position absolute
+    width 87px
+    height 1px
+    background-color #cccccc
+    z-index 4
+
+  &__wra
+    width 100px
+    padding-left 5px
+
+  .slick-slide
+    position relative
+    img
+      height 490px
+      width 750px
+      object-fit cover
+
+  .slick-arrow
+    opacity 1
+    border none
+    z-index 3
+    cursor pointer
+    position absolute
+    height 60px
+    width 75px
+    background-position center center
+    background-color white
+    background-repeat no-repeat
+    bottom 0
+    transition: background-position 0.2s;
+    &.slick-next
+      left 75px
+      background-image url('images/right-a.png')
+      &:hover
+        background-position 60% center
+      &:after
+        content ''
+        position absolute
+        left 0
+        top: 0
+        background-color: mercury
+        width 1px
+        margin-top 25%
+        height 50%
+    &.slick-prev
+      left 0
+      background-image url('images/left-a.png')
+      &:hover
+        background-position  40% center
+
+  .slick-active
+    color black
