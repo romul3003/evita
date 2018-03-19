@@ -1,0 +1,19 @@
+mixin b-best-masters(content)
+	.best-masters-wrap
+		.container
+			+b.best-masters
+				+e.col
+					+e.title= content.title
+					+e.seo-block= content.SEO_block
+
+				+e.col
+					+e.text
+						+e("p").paragraph= content.text_1.paragraph_1
+						+e("p").paragraph= content.text_1.paragraph_2
+						+e("p").paragraph= content.text_1.paragraph_3
+
+				+e.col
+					+e.text
+						+e("p").paragraph= content.text_1.paragraph_1
+						+e("p").paragraph= content.text_1.paragraph_2
+						+e("p").paragraph= content.text_1.paragraph_3

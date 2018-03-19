@@ -4,12 +4,21 @@ body
 	font-size 21px
 	font-weight 400
 	line-height 1.5
+// make room for fixed header
+body
+	padding-top 129px
+	@media lg
+		padding-top 163px
 *
 	box-sizing border-box
 	
 .container
-	max-width 1170px
+	max-width 100%
 	margin 0 auto
+	@media lg
+		max-width 960px
+	@media xl
+		max-width 1170px
 	@media xxl
 		max-width 1530px
 a 
@@ -31,8 +40,7 @@ input
 	outline 0
 	color dove-gray
 	font-size 12px
-	font-weight 700
-	font-family futura
+	font-family futura-heavy
 	letter-spacing .7px
 	text-transform uppercase
 	transition transform .3s

@@ -1,0 +1,71 @@
+.best-masters-wrap
+	margin: 5% 0
+	
+	@media all and (max-width: mdWidth - 1)
+		margin: 10% 0
+
+	.container
+		@media all and (max-width: xlWidth - 1)
+			padding 0 10px
+
+.best-masters
+	display flex
+	flex-wrap wrap
+	padding: 6% 5%
+	border 1px solid mercury
+	background-color white
+	
+	@media all and (max-width: mdWidth - 1)
+		flex-direction column
+	
+	&__col
+		flex 0 1 33.33%
+		padding 0 5%
+		
+		@media all and (max-width: xxlWidth - 1)
+			padding 0 3%
+			
+		@media all and (max-width: xlWidth - 1)
+			padding 0 2%
+			
+		@media all and (max-width: mdWidth - 1)
+			flex 0 1 100%
+			margin-bottom 2.5em
+			
+			&:last-of-type
+				margin-bottom 0
+		
+	&__title
+		margin-bottom 1em
+		color black
+		font-family futura-demi
+		font-size 28px
+		line-height normal
+		
+		@media all and (max-width: lgWidth - 1)
+			font-size 24px
+		
+	&__seo-block
+		color black
+		font-family futura-demi
+		font-size 18px
+		
+	&__text
+		color dove-gray
+		font-family futura
+		font-weight 600
+		
+		@media all and (max-width: lgWidth - 1)
+			font-size 18px
+
+	&__paragraph
+		margin-bottom 1.5em
+		line-height normal
+		
+		@media all and (max-width: mdWidth - 1)
+			margin-bottom 1em
+		
+		&:last-of-type
+			margin-bottom 0
+		
+	

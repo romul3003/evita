@@ -1,0 +1,6 @@
+mixin b-advantage(src, title, text)
+	+b.advantage
+		+e("figure").img-wrap
+			+e("img").img(src=asset(src))
+		+e('h6').title= title
+		+e('p').text= text

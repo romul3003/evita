@@ -1,11 +1,11 @@
 .button
 	position relative
 	display inline-block
-	cursor pointers
+	cursor pointer
 	font-size 10px
-	font-weight 700
-	font-family futura
+	font-family futura-heavy
 	text-transform uppercase
+	text-align center
 	line-height 1
 .button_full
 	@extend .button
@@ -13,6 +13,7 @@
 	background-color sandal
 	padding 28px 45px 29px
 	transition background-color .3s
+	border 0
 	&:hover
 		background-color darken(sandal, 20%)
 .button_empty
